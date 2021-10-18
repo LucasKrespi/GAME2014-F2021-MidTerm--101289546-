@@ -2,10 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*=================================================================
+ * BulletController
+ * Student: Lucas Krespi dos Santos, 
+ * ID: 101289546
+ * Date last Modified: 18/101/2021
+ * check logic and change variable names;
+ * change logic to portrait mode;
+====================================================================
+*/
 public class BulletController : MonoBehaviour, IApplyDamage
 {
-    public float verticalSpeed;
-    public float verticalBoundary;
+    public float HorizontalSpeed;
+    public float HorizontalBoundary;
     public BulletManager bulletManager;
     public int damage;
     
@@ -24,12 +34,12 @@ public class BulletController : MonoBehaviour, IApplyDamage
 
     private void _Move()
     {
-        transform.position += new Vector3(0.0f, verticalSpeed, 0.0f) * Time.deltaTime;
+        transform.position += new Vector3(HorizontalSpeed, 0.0f, 0.0f) * Time.deltaTime;
     }
 
     private void _CheckBounds()
     {
-        if (transform.position.y > verticalBoundary)
+        if (transform.position.x > HorizontalBoundary)
         {
             bulletManager.ReturnBullet(gameObject);
         }
