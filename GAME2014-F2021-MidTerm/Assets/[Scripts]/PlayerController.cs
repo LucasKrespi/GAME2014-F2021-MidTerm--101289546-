@@ -11,6 +11,7 @@ using UnityEngine;
  * Date last Modified: 18/101/2021
  * check logic and change variable names;
  * change logic to portrait mode;
+ * changed line 52 60 frane for 30 frams (my phone is not in the best chape)
 ====================================================================
 */
 public class PlayerController : MonoBehaviour
@@ -25,8 +26,6 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed;
     public float verticalTValue;
 
-    [Header("Bullet Firing")]
-    public float fireDelay;
 
     // Private variables
     private Rigidbody2D m_rigidBody;
@@ -50,7 +49,7 @@ public class PlayerController : MonoBehaviour
      private void _FireBullet()
     {
         // delay bullet firing 
-        if(Time.frameCount % 60 == 0 && bulletManager.HasBullets())
+        if(Time.frameCount % 30 == 0 && bulletManager.HasBullets())
         {
             bulletManager.GetBullet(transform.position);
         }
@@ -92,7 +91,7 @@ public class PlayerController : MonoBehaviour
         {
             // direction is negative
             direction = -1.0f;
-            Debug.Log("oi");
+            
         }
 
         if (m_touchesEnded.x != 0.0f)

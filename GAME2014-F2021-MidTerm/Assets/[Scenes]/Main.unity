@@ -1238,7 +1238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1924381406409770487, guid: 75b2ffc28fee3dc459185cb907076fd3, type: 3}
       propertyPath: verticalTValue
-      value: 0.01
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1924381406409770487, guid: 75b2ffc28fee3dc459185cb907076fd3, type: 3}
       propertyPath: verticalBoundary
